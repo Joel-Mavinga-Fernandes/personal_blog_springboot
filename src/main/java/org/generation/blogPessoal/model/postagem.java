@@ -27,6 +27,7 @@ public class postagem {
 	@Size(min=5, max=500)
 	private String titulo;
 	
+	
 	private String texto;
 	
 	@Temporal(TemporalType.TIMESTAMP)
