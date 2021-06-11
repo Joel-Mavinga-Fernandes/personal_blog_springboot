@@ -13,8 +13,8 @@ import org.springframework.web.servlet.ModelAndView;
 public class BlogPessoalApplication {
 	
 	@GetMapping
-	public ModelAndView swaggerU1() {
-		return new ModelAndView("redirect:/swagger-u1");
+	public ModelAndView swaggerUI() {
+		return new ModelAndView("redirect:/swagger-ui");
 	}
 
 	public static void main(String[] args) {
