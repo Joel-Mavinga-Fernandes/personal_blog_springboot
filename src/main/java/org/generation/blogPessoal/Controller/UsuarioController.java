@@ -44,6 +44,6 @@ public class UsuarioController {
 
 	@PutMapping 
 	public ResponseEntity<Usuario> put(@RequestBody Usuario usuario){
-		return ResponseEntity.ok(repository.save(usuario))
+		return ResponseEntity.ok(repository.save(usuario));
 	}
 }
