@@ -104,11 +104,11 @@ public class Usuario {
 		this.tipo = tipo;
 	}
 
-	public List<postagem> getPostagem() {
+	public List<Postagem> getPostagem() {
 		return postagem;
 	}
 
-	public void setPostagem(List<postagem> postagem) {
+	public void setPostagem(List<Postagem> postagem) {
 		this.postagem = postagem;
 	}
 	
