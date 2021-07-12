@@ -40,7 +40,7 @@ public class Usuario {
 	
 	@OneToMany(mappedBy = "usuario", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("usuario")
-	private List<postagem> postagem;
+	private List<Postagem> postagem;
 	
 	
 	public Usuario() {}

@@ -29,10 +29,21 @@ public class UsuarioController {
 		return usuarioService.Logar(user).map(resp-> ResponseEntity.ok(resp))
 				.orElse(ResponseEntity.status(HttpStatus.UNAUTHORIZED).build());
 	}
+
+	@GetMapping("/{id}")
+	public ResponseEntity<Usuario>GetById(@PathVariable long id){
+		return repository.findById(id).map(resp -> ResponseEntity.ok(resp))
+		.orElse(ResponseEntity.notFound().build());
+	}
 	
 	@PostMapping("/cadastrar")
 	public ResponseEntity<Usuario> Post(@RequestBody Usuario usuario){
 		return ResponseEntity.status(HttpStatus.CREATED)
 				.body(usuarioService.CadastrarUsuario(usuario));
+	}
+
+	@PutMapping 
+	public ResponseEntity<Usuario> put(@RequestBody Usuario usuario){
+		return ResponseEntity.ok(repository.save(usuario))
 	}
 }
